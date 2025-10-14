@@ -1,20 +1,8 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/10/09 13:24:23 by msuokas           #+#    #+#              #
-#    Updated: 2025/10/09 13:35:38 by msuokas          ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++20
 SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
-NAME = ex00
+NAME = minmaxswap
 RM = rm -f
 
 all: $(NAME)

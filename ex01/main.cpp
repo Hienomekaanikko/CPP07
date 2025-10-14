@@ -6,28 +6,34 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 13:52:20 by msuokas           #+#    #+#             */
-/*   Updated: 2025/10/09 16:15:03 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/10/14 17:21:02 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "iter.hpp"
 
+template <typename T>
+void f(T s){
+    std::cout << "Hello I am: " << s << std::endl;
+}
+
+
 int main(void) {
     int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    iter(arr, 10, f);
+    iter(arr, 10, f<int>);
 
     std::cout << "\n---------------------------------------------------------------------\n\n";
 
     std::string arr2[] = {"Seppo", "Teppo", "Jorma", "Kalevi", "Jooseppi"};
-    iter(arr2, 5, f);
+    iter(arr2, 5, f<std::string>);
 
     std::cout << "\n---------------------------------------------------------------------\n\n";
 
     char arr3[] = {'a', 'b', 'c', 'd', 'e'};
-    iter(arr3, 5, f);
+    iter(arr3, 5, f<char>);
 
     std::cout << "\n---------------------------------------------------------------------\n\n";
 
     long long arr4[] = {1111111111111111111, 2222222222222222222, 3333333333333333333, 4444444444444444444, 5555555555555555555};
-    iter(arr4, 5, f);
+    iter(arr4, 5, f<long long>);
 }

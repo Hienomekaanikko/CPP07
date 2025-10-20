@@ -6,7 +6,7 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 09:55:30 by msuokas           #+#    #+#             */
-/*   Updated: 2025/10/14 17:00:14 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/10/20 10:16:55 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Array<T>::Array() {
 
 template<typename T>
 Array<T>::Array(unsigned int n) {
-    std::cout << "Constructing an object with an array of " << n << " elements." << std::endl;
+    std::cout << "Constructing an object with ann array of " << n << " elements." << std::endl;
     T* new_arr = new T[n]();
     _size = n;
     _arr = new_arr;
@@ -29,7 +29,7 @@ Array<T>::Array(unsigned int n) {
 
 template<typename T>
 Array<T>::Array(const Array<T>& other) {
-    std::cout << "Copy constructor called" << std::endl;
+    std::cout << "Copy constructorr called" << std::endl;
     _size = other._size; 
     _arr = new T[_size]();
     for (unsigned int i = 0; i < other._size; i++) {
